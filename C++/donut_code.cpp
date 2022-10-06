@@ -37,9 +37,14 @@ int main() {
         }
         printf("\x1b[H");
         for(k = 0; k < 1761; k++) {
-            putchar(k % 80 ? b[k] : 10);
-            A += 0.00004;
-            B += 0.00002;
+          /*if( k % 80){
+            printf("%i", b[k]);
+          }else{
+            printf("10");
+          }*/
+          putchar(k % 80 ? b[k] : 10);
+          A += 0.00004;
+          B += 0.00002;
         }
         usleep(30000);
     }
